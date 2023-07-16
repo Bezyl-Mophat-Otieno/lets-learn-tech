@@ -1,0 +1,59 @@
+.container {
+
+    padding: 20px;
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+}
+.imgContainer{
+    flex:1;
+}
+.image {
+    width: 100%;
+    height:500px;
+    object-fit: contain;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes move {
+    from{
+        transform: translateY(-15px);
+    }
+    to{
+        transform: translateY(0px) scale(1.2);
+    }
+}
+.form{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: transparent;
+}
+.input,.textArea{
+    background-color: transparent;
+    font-weight: bold;
+    padding: 15px 30px;
+    color: #ccc;
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    font-size: 18px;
+
+    
+
+
+}
