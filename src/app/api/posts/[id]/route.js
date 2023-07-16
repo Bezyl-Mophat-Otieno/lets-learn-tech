@@ -17,3 +17,19 @@ export const GET = async (request,{params})=>{
         
     }
 }
+//Delete a post
+export const DELETE = async (request,{params})=>{
+
+    const {id} = params;
+
+
+    try {
+        await dbConnect();
+        await Post.findByIdAndDelete(id);
+        return new NextResponse("Blog Deleted Successfully", {status: 200});
+
+        } catch (error) {
+            return new NextResponse(error, {status: 500});
+        
+    }
+}

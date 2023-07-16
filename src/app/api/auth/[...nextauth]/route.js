@@ -28,10 +28,9 @@ import bcrypt from 'bcryptjs'
           if(user){
             
             const isMatch = await bcrypt.compare(password,user.password)
-            console.log({isMatch})     
 
             if(isMatch){
-              return user
+              return {email:user.email,username:user.username}
             }else{
               throw new Error("Invalid Credentials")
             }
